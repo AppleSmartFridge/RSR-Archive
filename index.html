@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Viewer</title>
+  <style>
+    body { text-align: center; font-family: sans-serif; }
+    iframe { width: 90%; height: 80vh; border: 1px solid #ccc; margin-bottom: 10px; }
+    button { margin: 5px; padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>HTML File Viewer</h1>
+  <iframe id="viewer" src="1.html"></iframe>
+  <br>
+  <button onclick="prev()">Previous</button>
+  <button onclick="next()">Next</button>
+
+  <script>
+    const totalFiles = 25;       // number of files you have
+    let index = 1;               // start at 1.html
+
+    function showFile() {
+      document.getElementById("viewer").src = index + ".html";
+    }
+
+    function prev() {
+      index = (index - 1 < 1) ? totalFiles : index - 1;
+      showFile();
+    }
+
+    function next() {
+      index = (index + 1 > totalFiles) ? 1 : index + 1;
+      showFile();
+    }
+  </script>
+</body>
+</html>
