@@ -10,16 +10,16 @@
   </style>
 </head>
 <body>
-  <h1>HTML File Viewer</h1>
+  <h1>Red Star Republic Messages</h1>
   <iframe id="viewer" src="1.html"></iframe>
   <br>
   <button onclick="prev()">Previous</button>
   <button onclick="next()">Next</button>
 
   <script>
-    const totalFiles = 25;       // number of files you have
-    let index = 1;               // start at 1.html
-
+    const totalFiles = 25;      
+    let index = 1;               
+    
     function showFile() {
       document.getElementById("viewer").src = index + ".html";
     }
